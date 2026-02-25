@@ -116,18 +116,14 @@ pip install onnxruntime==1.20.0
 pip install fastapi uvicorn
 pip install crewai-tools
 pip install langchain-community
-
-## How to Run the Application
+```
+How to Run the Application
 
 Start the FastAPI server using:
-
+```bash
 uvicorn main:app --reload
-
+```
 The application will run at:
-
+```url
 http://127.0.0.1:8000
-## API Documentation
-
-Swagger UI is available at:
-
-http://127.0.0.1:8000/docs
+```
