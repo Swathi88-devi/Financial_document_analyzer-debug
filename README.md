@@ -127,3 +127,9 @@ The application will run at:
 ```url
 http://127.0.0.1:8000
 ```
+API Documentation
+
+Swagger UI is available at:
+```url
+http://127.0.0.1:8000/docs
+```
