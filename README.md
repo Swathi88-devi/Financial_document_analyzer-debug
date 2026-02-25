@@ -1,6 +1,6 @@
-# 📊 Financial Document Analyzer – Debug Assignment
+# Financial Document Analyzer – Debug Assignment
 
-## 📌 Project Overview
+**Project Overview**
 
 I worked on a **Financial Document Analyzer** that processes corporate reports, financial statements, and investment documents using **AI-powered analysis agents built with CrewAI and FastAPI**.
 
@@ -9,7 +9,7 @@ My task was to **identify deterministic bugs, fix them, improve inefficient prom
 
 ---
 
-## 🎯 Assignment Objective
+##  Assignment Objective
 
 - Debug the existing codebase  
 - Fix all deterministic bugs  
@@ -19,9 +19,9 @@ My task was to **identify deterministic bugs, fix them, improve inefficient prom
 
 ---
 
-## 🐛 Bugs Found and How I Fixed Them
+## Bugs Found and How I Fixed Them
 
-### 1️⃣ Incorrect CrewAI Imports
+### 1.Incorrect CrewAI Imports
 **Bug:**  
 The project imported `Agent` from `crewai.agents`, which caused an `ImportError`.
 
@@ -30,7 +30,7 @@ I corrected the import to use `Agent` and `LLM` directly from `crewai`.
 
 ---
 
-### 2️⃣ Invalid Tool Implementations
+### 2️. Invalid Tool Implementations
 **Bug:**  
 Tools were implemented as raw Python functions, which caused **Pydantic validation errors** in CrewAI.
 
@@ -39,7 +39,7 @@ I rewrote all tools using `BaseTool` from `crewai_tools`, making them compatible
 
 ---
 
-### 3️⃣ Library Version Mismatch
+### 3️. Library Version Mismatch
 **Bug:**  
 The code referenced unsupported components such as `SerperDevTool` and decorators not available in the installed versions.
 
@@ -48,7 +48,7 @@ I replaced unsupported components with version-compatible implementations while 
 
 ---
 
-### 4️⃣ PDF Reading Failure
+### 4️. PDF Reading Failure
 **Bug:**  
 The application could not properly read PDF documents.
 
@@ -57,7 +57,7 @@ I integrated `PyPDFLoader` from `langchain-community` to reliably extract text f
 
 ---
 
-### 5️⃣ HTTP 405 Method Not Allowed Error
+### 5️. HTTP 405 Method Not Allowed Error
 **Bug:**  
 Accessing `/analyze` using a browser returned `405 Method Not Allowed`.
 
@@ -69,7 +69,7 @@ No code change was required. I documented this behavior clearly and used Swagger
 
 ---
 
-### 6️⃣ Missing API Key Configuration
+### 6️.Missing API Key Configuration
 **Bug:**  
 CrewAI requires an external LLM API key, but no key was provided.
 
@@ -78,7 +78,7 @@ I configured the project to load the API key securely using environment variable
 
 ---
 
-### 7️⃣ Dependency Installation Issue
+### 7️. Dependency Installation Issue
 **Bug:**  
 Some dependencies failed to install correctly using `requirements.txt` alone.
 
@@ -90,7 +90,7 @@ I installed critical packages separately to ensure a stable environment.
 
 ---
 
-## 🧠 Prompt Improvements
+## Prompt Improvements
 
 **Problem:**  
 The original prompts allowed speculation and hallucinated financial data.
@@ -104,7 +104,7 @@ This improved reliability and accuracy.
 
 ---
 
-## ⚙️ Setup Instructions
+##  Setup Instructions
 
 ### Install Dependencies
 
