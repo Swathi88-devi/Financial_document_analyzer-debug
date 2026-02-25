@@ -1,6 +1,6 @@
 # Financial Document Analyzer – Debug Assignment
 
-**Project Overview**
+## Project Overview
 
 I worked on a **Financial Document Analyzer** that processes corporate reports, financial statements, and investment documents using **AI-powered analysis agents built with CrewAI and FastAPI**.
 
